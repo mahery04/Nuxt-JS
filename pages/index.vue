@@ -8,12 +8,11 @@
     </div>
     <p class="p-title">Formulaire d'information pour </p>
     <div class="form">
-      <div class="form-name">
-        <b-form-input
-      id="inline-form-input-name"
-      class="mb-2 mr-sm-2 mb-sm-0"
-      placeholder="Jane Doe"
-    ></b-form-input>
+      <div class="login-form">
+        <span>Prénom</span>
+        <b-form-input v-model="text" placeholder="Prénom"></b-form-input>
+        <span>Nom</span>
+        <b-form-input v-model="text" placeholder="Nom"></b-form-input>
       </div>
     </div>
   </div>
@@ -50,7 +49,7 @@ body {
 
 .p-title {
   position: fixed;
-  top: 12%;
+  top: 15%;
   left: 45%;
   font-family: 'Montserrat';
   font-style: normal;
@@ -70,11 +69,22 @@ body {
   left: 36%;
   top: 230px;
 }
+
+.login-form {
+  position: absolute;
+  top:40px;
+  right:100px;
+}
 </style>
 
 <script>
 export default {
-  name: 'IndexPage'
+  data() {
+    name: 'IndexPage'
+    return {
+      text: ''
+    }
+  }
 }
 </script>
 
